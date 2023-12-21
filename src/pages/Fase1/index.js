@@ -1,3 +1,6 @@
+import Card from '../../components/Card';
+import Carousel from '../../components/Carousel';
+import Category, { categories, filterCategory } from '../../components/Category';
 import Container from '../../components/Container';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
@@ -8,8 +11,22 @@ function Fase1() {
         <>
             <Header />
             <Container>
-                <section className={styles.fase1}>
-                    <h1>Fase 1</h1>
+                <section className={ styles.fase1 }>
+                    {
+                        categories.map((category,index) =>
+                            <Category category={category}>
+                                <Carousel>
+                                    {filterCategory(index).map((filmes) => 
+                                        <Card 
+                                            imagem={filmes.imagem} 
+                                            titulo={filmes.titulo} 
+                                            legenda={filmes.descricao}  
+                                            key={filmes.id} 
+                                        />)}
+                                </Carousel>
+                            </Category>
+                        )
+                    }
                 </section>
             </Container>
             <Footer />
