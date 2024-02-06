@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+}
+
+.card h2{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.card img{
+    height: 550px;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.card p{
+    padding: 20px;
+    font-size: 1.2rem;
+    width:90%;
+    margin: auto;
+    text-align: justify;
+    text-indent: 40px;
+}
+
+/* .card a:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 10px #222;
+    border-radius: 10px;
+} */
